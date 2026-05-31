@@ -3,9 +3,9 @@ package proyecto;
 public class Encargado extends Empleado {
 	private String cargo;
 
-	public Encargado(String nombre, String paterno, String materno, int CI, float sueldo, String horario,
+	public Encargado(String nombre, String paterno, String materno, int CI, float sueldo, String horario,String carrera,
 			String cargo) {
-		super(nombre, paterno, materno, CI, sueldo, horario);
+		super(nombre, paterno, materno, CI, sueldo, horario, carrera);
 		this.cargo = cargo;
 	}
 
@@ -16,7 +16,7 @@ public class Encargado extends Empleado {
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
-//falta añadir prod jiji
+//falta añadir producto jiji :)
 	//public void registrarProducto(Producto p) {
 	//	System.out.println("Producto registrado: " + p.getNombre());
 //	}

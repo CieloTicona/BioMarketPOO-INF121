@@ -5,8 +5,8 @@ public class EstudianteProyecto extends Empleado {
 	private String cargo;
 
 	public EstudianteProyecto(String nombre, String paterno, String materno, int CI, float sueldo, String horario,
-			int registroUniv, String cargo) {
-		super(nombre, paterno, materno, CI, sueldo, horario);
+			int registroUniv, String cargo, String carrera) {
+		super(nombre, paterno, materno, CI, sueldo, horario, carrera);
 		this.registroUniv = registroUniv;
 		this.cargo = cargo;
 	}

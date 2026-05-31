@@ -2,8 +2,8 @@ package proyecto;
 
 public class Auxiliar extends Empleado {
 //no tiene atributos propiosssss
-	public Auxiliar(String nombre, String paterno, String materno, int CI, float sueldo, String horario) {
-		super(nombre, paterno, materno, CI, sueldo, horario);
+	public Auxiliar(String nombre, String paterno, String materno, int CI, float sueldo, String horario, String carrera) {
+		super(nombre, paterno, materno, CI, sueldo, horario, carrera);
 	}
 
 	@Override
