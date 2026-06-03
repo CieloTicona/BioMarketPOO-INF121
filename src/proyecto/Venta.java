@@ -1,0 +1,54 @@
+package proyecto;
+
+public class Venta {
+	private String fecha, metodoPago, diaDeVenta;
+	private float total;
+	private Estudiante e;
+	private int cantProd;
+	private Producto[] p = new Producto[50];
+
+	public Venta(String f, String mp, String d) {
+		fecha = f;
+		metodoPago = mp;
+		diaDeVenta = d;
+		cantProd = 0;
+	}
+
+	public void registrarVenta() {
+
+	}
+
+	public void calcularTotal() {
+		total = 0;
+		for (int i = 0; i < cantProd; i++) {
+			total += p[i].getPrecio() * p[i].getCantidad();
+		}
+	}
+
+	public float calcularCambio(float recibido) {
+		return recibido - total;
+	}
+
+	//como Venta no tiene el inventario habría q poner en el main algo q verifique si el producto a agregar está en el inventario
+	public void agregarProducto(Producto p) {
+		if (cantProd < 50) {
+			this.p[cantProd] = p;
+			cantProd++;
+		}
+	}
+
+	public void mostrarTicket() {
+		System.out.println("--- TICKET DE VENTA ---");
+		System.out.println("Fecha: " + fecha);
+		System.out.println("Dia: " + diaDeVenta);
+		System.out.println("Metodo de pago: " + metodoPago);
+		if (e != null)
+			System.out.println("Vendedor: " + e.getNombre());
+		System.out.println();
+		for (int i = 0; i < cantProd; i++) {
+			System.out.println(p[i].getNombre() + " - Cantidad: " + p[i].getCantidad() + " - Precio: " + p[i].getPrecio());
+		}
+		System.out.println("------------------------");
+		System.out.println("TOTAL: " + total);
+	}
+}
