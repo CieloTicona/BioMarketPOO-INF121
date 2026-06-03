@@ -76,13 +76,12 @@ public class Inventario {
 	
 	//creo q el reducir stock iría en la clase Producto
 	
-	public void buscarProducto(String n) {
-		for(int i=0;i<cantProd;i++) {
-			if(p[i].getNombre().equals(n))
-				System.out.println("El producto está en el inventario");
-			else
-				System.out.println("El producto no está en el inventario");
-		}
+	public boolean buscarProducto(String nombre) {
+	    for(int i=0; i<cantProd; i++) {
+	        if(p[i].getNombre().equals(nombre))
+	            return true;
+	    }
+	    return false;
 	}
 	
 	public void contarTipoX(String x) {
@@ -94,7 +93,11 @@ public class Inventario {
 		System.out.println("Hay "+c+" productos tipo "+x+" en el inventario");
 	}
 	
-	//debatible, es q como le puse fecha, listar por día sería directamente mostrar :/
+	public void listarPorDia() {
+		
+	}
 	
-	//me falta también lo de productos no vendidos unu
+	public void productosNoVendidos() {
+		
+	}
 }
