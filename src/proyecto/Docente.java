@@ -30,4 +30,16 @@ public class Docente extends Persona{
 		System.out.println("Cargo: "+cargo);
 		System.out.println("Área responsable: "+areaResponsable);
 	}
+	public void registrarProducto(Producto p) {
+        System.out.println("Producto registrado: " 
+                           + p.getNombre());
+    }
+    
+    public void revisarInventario() {
+        System.out.println("Revisando inventario...");
+    }
+    
+    public void generarReporte() {
+        System.out.println("Generando reporte del día...");
+    }
 }
