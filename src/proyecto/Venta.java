@@ -13,16 +13,32 @@ public class Venta {
 		diaDeVenta = d;
 		cantProd = 0;
 	}
-
-	public void registrarVenta() {
-
+	public void mostrar() {
+	    System.out.println("Fecha: " + fecha);
+	    System.out.println("Día: " + diaDeVenta);
+	    System.out.println("Total: " + total);
+	    System.out.println("Método de pago: " + metodoPago);
 	}
+
+
 
 	public void calcularTotal() {
 		total = 0;
 		for (int i = 0; i < cantProd; i++) {
 			total += p[i].getPrecio() * p[i].getCantidad();
 		}
+	}
+	public void registrarVenta() {
+	    calcularTotal();
+	    System.out.println("VENTA REGISTRADA");
+	    System.out.println("Fecha: " + fecha);
+	    System.out.println("Día: " + diaDeVenta);
+	    System.out.println("Cantidad de productos: " + cantProd);
+	    for (int i = 0; i < cantProd; i++) {
+	        p[i].mostrar();
+	    }
+	    System.out.println("Total: " + total);
+	    System.out.println("Método de pago: " + metodoPago);
 	}
 
 	public float calcularCambio(float recibido) {

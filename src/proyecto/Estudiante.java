@@ -25,19 +25,19 @@ public class Estudiante extends Persona {
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
-	 public void vender() {
-	        System.out.println(getNombre() + " está vendiendo.");
-	    }
-	    
-	    public void producir() {
-	        System.out.println(getNombre() + " está produciendo.");
-	    }
-	    
-	    @Override
-	    public void mostrar() {
-	        super.mostrar();
-	        System.out.println("Registro Univ: " + registroUniv);
-	        System.out.println("Cargo: " + cargo);
-	    }
+
+	public void vender() {
+		System.out.println(getNombre() + " está vendiendo");
+	}
+
+	public void producir() {
+		System.out.println(getNombre() + " está produciendo");
+	}
+
+	public void mostrar() {
+		super.mostrar();
+		System.out.println("Registro Univ: " + registroUniv);
+		System.out.println("Cargo: " + cargo);
+	}
 
 }

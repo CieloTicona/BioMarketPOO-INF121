@@ -2,7 +2,7 @@ package proyecto;
 
 public class Producto {
 	private String nombre, tipo, lugarOrigen;
-	private float precio;
+	private Float precio;
 	private int cantidad;
 	
 	public Producto(String n, String t, String lo, float p, int c) {
